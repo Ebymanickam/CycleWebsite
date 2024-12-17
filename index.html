@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.cycle.com</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* h5{
+    text-align: center;
+    text-decoration: underline;
+}  
+label{
+    display: inline-block;
+    padding: 5px;
+}
+button{
+    
+    margin-left: 88px;
+}
+.mainwrapper{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+}
+
+.loginwrapper{
+    width: 290px;
+    height: 290px;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    background-color: wheat;
+    border-radius: 10px;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(223 223 223);
+}
+
+
+.container {
+    background-color: #2f2f2f;
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    left: 1025px;
+    top: 134px;
+    backdrop-filter: blur(1px);
+}
+
+.container:hover {
+    box-shadow: 10px 10px 5px rgb(38, 38, 38);
+}
+
+.Brand {
+    position: absolute;
+    top: 0px;
+    left: 132px;
+    width: 100px;
+    height: 100px;
+}
+
+.active {
+    background-color: yellow;
+}
+
+.emailbtn {
+    position: absolute;
+    top: 110px;
+    left: 112px;
+    color: black;
+    line-height: 1.5;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 76px;
+    height: 28px;
+    border: none;
+    outline: none;
+    /* background:yellow; */
+}
+
+.emailbtn:focus {
+    background-color: yellow;
+}
+
+.phonebtn:focus {
+    background-color: yellow;
+}
+
+.phonebtn {
+    position: absolute;
+    top: 110px;
+    left: 194px;
+    /* color:white; */
+    line-height: 1.5;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 76px;
+    height: 28px;
+    border: none;
+    outline: none;
+    background: rgb(231, 231, 231);
+}
+
+/* .phonebtn:checked{
+    background-color: yellow;
+} */
+.emailformclss {
+    position: absolute;
+    top: 162px;
+    left: 20px;
+    color: white;
+    font-size: small;
+}
+
+#emailid {
+    position: absolute;
+    top: 192px;
+    left: 20px;
+    width: 274px;
+    height: 36px;
+    border-radius: 6px;
+    /* outline: none; */
+    border: none;
+    padding: 0px 15px;
+}
+
+.phoneformclss {
+    position: absolute;
+    top: 162px;
+    left: 20px;
+    color: white;
+    font-size: small;
+}
+
+#phone_id {
+    position: absolute;
+    top: 192px;
+    left: 20px;
+    width: 274px;
+    height: 36px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    padding: 0px 15px;
+}
+
+.passformclss {
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    color: white;
+    font-size: small;
+}
+
+#p_id {
+    position: absolute;
+    left: 20px;
+    top: 278px;
+    width: 274px;
+    height: 36px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    padding: 0px 15px;
+}
+
+.passforget {
+    position: absolute;
+    top: 328px;
+    left: 218px;
+    color: white;
+    font-size: small;
+}
+
+.btnlogin {
+    position: absolute;
+    top: 380px;
+    left: 110px;
+    width: 126px;
+    height: 36px;
+    border-radius: 22px;
+    outline: none;
+    border: none;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.accountclss {
+    position: absolute;
+    bottom: 40px;
+    left: 72px;
+    font-size: small;
+    color: white;
+}
+
+.signup {
+    color: rgb(255, 234, 0);
+    font-weight: bold;
+}
+
+#bikes {
+    padding-top: 8%;
+}
+
+#bikes li {
+    list-style: none;
+    position: relative;
+    margin-top: 60px;
+}
+
+#bikes img {
+    display: block;
+    width: 120px;
+    transition: .5s;
+}
+
+#bikes img:hover {
+    transform: translateX(30px);
+    transition: .5s;
+}
+
+#big-img img {
+    position: absolute;
+    width: 500px;
+    top: 24%;
+    left: 24%;
+}
+
+#path {
+    background-color: rgb(10 194 164);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    clip-path: circle(520px at left 328px);
+}
+
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    top: 20px;
+    left: 548px;
+    border-radius: 8px;
+}
+
+.navbar ul li {
+    padding: 10px 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar ul li:hover {
+    background-color: rgb(255, 255, 255);
+    /* border-bottom: 4px solid rgb(0, 0, 0); */
+    /* box-shadow: 10px 10px 5px rgb(155, 156, 157); */
+    width: auto;
+}
+
+.searchbar {
+    position: absolute;
+    top: 22px;
+    right: 160px;
+    z-index: 1;
+    background-color: #ffffff;
+    width: 352px;
+    height: 30px;
+}
+
+input[type="text"] {
+    border: none;
+    width: 300px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    padding: 2px 6px;
+    outline: none;
+}
+
+.searchbar:hover {
+    box-shadow: 10px 10px 5px rgb(155, 156, 157);
+}
+    </style>
+    
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Galleries</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    <div class="searchbar">
+        <input type="text" placeholder="search" onclick="input()" id="search">
+        <i class="fa fa-search" style="position: absolute;
+        top: 8px;
+        right: 8px;"></i>
+        </div>
+
+    <div class="container">
+        <img src="logo.png" class="Brand">
+        <button class="emailbtn active" onclick="emailFunction()">email Id</button>
+        <button class="phonebtn" onclick="phoneFunction()">Phone No</button>
+        
+    <form action="">
+        <div class="emaildiv">
+            <label class="emailformclss">Enter Address</label>
+            <input type="text" id="emailid" placeholder="eg.ebymanickam@gmail.com">
+        </div>
+        <div class="phonediv" style="display: none;">
+            <label class="phoneformclss">Enter Phone Number</label>
+            <input type="number" id="phone_id">
+        </div>
+            <label class="passformclss">Password</label>
+            <input type="password" id="p_id">
+            <span class="passforget">Forget Password?</span>
+            <button onclick="loginFunction()" class="btnlogin">Login</button>
+            <label class="accountclss">Don't you have an account? <span class="signup">Sign Up</span></label>
+    </form>
+    </div>
+        <div id="path">
+            <div id="bikes">
+                <li><img src="bike1.png" class="bike1" onclick="big('bike1.png')"></li>
+                <li><img src="bike2.png" class="bike2" onclick="big('bike2.png')"></li>
+                <li><img src="bike3.png" class="bike3" onclick="big('bike3.png')"></li>
+            </div>
+        </div>
+        <div id="big-img">
+            <img src="bike3.png" class="big">
+        </div>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $(".emailbtn").click(function () {
+                $(".emaildiv").show();
+                $(".phonediv").hide();
+            });
+            $(".phonebtn").click(function () {
+                $(".phonediv").show();
+                $(".emaildiv").hide();
+            });
+
+            $(".bike1").click(function () {
+                $("#path").css('background-color', 'rgb(160 218 27)');
+                $("body").css('background-color', '')
+            });
+            $(".bike2").click(function () {
+                $("#path").css('background-color', 'rgb(255 75 75)');
+            });
+            $(".bike3").click(function () {
+                $("#path").css('background-color', 'rgb(255 145 51)');
+            });
+
+        });
+
+        function input() {
+            var type = "herocycles.com";
+            var website = document.getElementById("search").value;
+
+            if (type == website) {
+                window.location.href = "https://www.herocycles.com/bike";
+            }
+            else {
+                return null;
+            }
+        }
+
+        function big(img) {
+            document.querySelector('.big').src = img;//only for document.querySelector("").src=img;
+        }
+
+
+        function loginFunction() {
+            var email = "ebymanickam@gmail.com";
+            var phone = 6380557319;
+            var password = 123456;
+            var email_enter = document.getElementById("emailid").value;
+            var pass_word = document.getElementById("p_id").value;
+            var phonenumber = document.getElementById("phone_id").value;
+
+            if (email == email_enter && password == pass_word) {
+                window.location.href = "https://dribbble.com/tags/login-page";
+                alert("you're authorised person");
+            }
+            else if (phone == phonenumber) {
+                window.location.href = "https://dribbble.com/tags/login-page";
+                alert("you're authorised person")
+            }
+            else {
+                alert("you're not authorised person");
+            }
+        };
+    </script>
+
+</body>
+
+</html>
